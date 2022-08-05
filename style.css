@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --bright_orange:hsl(31, 77%, 52%);
+    --Dark_cyan: hsl(184, 100%, 22%);
+    --Very_dark_cyan:hsl(179, 100%, 13%);
+    --Transparent_white: hsla(0, 0%, 100%, 0.75);
+    --Very_light_gray: hsl(0, 0%, 95%);
+}
+body{
+    width:100%;
+    min-height: 100vh;
+    background-color: var(--Very_light_gray);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:2em;
+}
+.card-container{
+    width:65%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.car-column{
+    width:33.3%;
+    padding:2.5em;
+}
+.car-column1{
+    background-color: var(--bright_orange);
+}
+.car-column2{
+    background-color: var(--Dark_cyan);
+}
+.car-column3{
+    background-color: var(--Very_dark_cyan);
+}
+.car-icon{
+    width:70px;
+}
+.column-title{
+    color:var(--Very_light_gray);
+    margin:.8em 0;
+    font-size:2.3rem;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight:700;
+}
+.column-description{
+    color:var(--Transparent_white);
+    font-size:.9rem;
+    line-height: 1.5;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+.btn{
+    padding:.8em 2.4em;
+    margin-top:6em;
+    border-radius: 2em;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    border: 1px solid #fff;
+    outline: none;
+    background-color: var(--Very_light_gray);
+}
+.btn1{
+    color:var(--bright_orange);
+}
+.btn1:hover{
+    color:var(--Very_light_gray);
+    background-color: var(--bright_orange);
+    cursor: pointer;
+}
+.btn2{
+    color:var(--Dark_cyan);
+}
+.btn2:hover{
+    color:var(--Very_light_gray);
+    background-color:var(--Dark_cyan);
+    cursor: pointer;
+}
+.btn3{
+    color:var(--Very_dark_cyan);
+}
+.btn3:hover{
+    color:var(--Very_light_gray);
+    background-color: var(--Very_dark_cyan);
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px){
+    .card-container{
+        width:90%;
+    }
+    .btn{
+        margin-top:3em;
+    }
+}
+
+@media screen and (max-width:600px){
+    .card-container{
+        width:80%;
+        flex-direction:column;
+        
+    }
+    .car-column{
+        width:100%;
+    }
+    .car-icon{
+        width:60px;
+    }
+    .column-title{
+        font-size: 1.9rem;
+    }
+    .btn{
+        margin-top:2em;
+    }
+}
